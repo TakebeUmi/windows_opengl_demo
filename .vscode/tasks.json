@@ -1,0 +1,35 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C/C++: g++.exe build active file",
+            "type": "cppbuild",
+            "command": "C:/Users/taket/mingw64/bin/g++.exe",
+            "args" : [
+                "-g",
+                "-std=c++14",
+                "-I${workspaceFolder}/include",
+                "-L${workspaceFolder}/lib",
+                "${workspaceFolder}/src/*.cpp",
+                "${workspaceFolder}/src/grad.c",
+                "-lglfw3dll",
+                "-o",
+                "${workspaceFolder}/zmmr.exe"
+            ],
+
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault":true
+            },
+            "detail": "compiler: C:/Users/taket/mingw64/bin/g++.exe"
+        }
+    ]
+}
